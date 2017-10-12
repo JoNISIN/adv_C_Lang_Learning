@@ -3,6 +3,7 @@
 # 以參數方式執行程式  例:  ./程式名稱.exe 數列長度 1 2 3 ...等長數列
 # 作業檔案為week4_to_stu.c   函數與主程式填空
 # 參考用實作檔案為 week-slove.c
+#week4-origin.c 為week2內容的變形程式
 #
 #
 # input 數列長度 數列
