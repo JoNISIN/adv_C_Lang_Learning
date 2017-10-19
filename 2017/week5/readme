@@ -1,3 +1,34 @@
-# week5.c 為Big5編碼檔案
+# week5.c week5-win.c 為Big5編碼檔案
 # week5-posix.c 為utf8編碼檔案
-# 作業內容之後補充...
+# week5.c為程式算法測試檔案僅單純有input和output(無註解)
+# week5-win.c week5-posix.c 為完整格式範例檔(包含請求輸入內容 和告知輸出為何的 並附註解)
+
+#此次作業內容為...
+
+使用structure, structure中要依據使用者輸入的數字個數動態的宣告存放空間
+    typedef struct num_list
+    {
+        int counts;
+        int *pList;
+    }tNumList;
+    
+要有2個function來處理sort與merge，其定義分別為
+
+void bubbleSort(tNumList *list);
+void merge (tNumList *list1, tNumList *list2);
+
+不得宣告array但是可以使用array方式來access資料
+提醒: tNumList 中的 pList 也要記得動態宣告
+
+input:
+輸入內容為兩組兩行的連續數字
+其中數列格式
+第一行 輸入一個正整數代表數列長度
+第二行 輸入對應數列長度的連續數字做為數列內容
+
+output:
+第一行輸出 數列1排序後的結果
+第二行輸出 數列2排序後的結果
+第三航輸出 數列1和2合併並排序的結果
+
+
