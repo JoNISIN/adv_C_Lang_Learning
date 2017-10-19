@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 #define getSpace(a,b) (a*)malloc(sizeof(a)*b);
-#define swap(a,b) do{a=a+b;b=a-b;a=a-b;}while(0)
+#define swap(a,b) do{a=a+b;b=a-b;a=a-b;}while(0)  //利用巨集與數學方式進行交換
 
 typedef struct num_list{
 	int counts;
@@ -19,19 +19,24 @@ int main(void){
 	list1 = getSpace(tNumList,1);
 	list2 = getSpace(tNumList,1);
 	/*利用結構中的counts元素接收數列長度 並建立等長數列後 接收數列*/
+	printf("Please enter how many numbers in list1: ");
 	scanf("%d",&(list1->counts));
 	list1->plist = getSpace(int,list1->counts);
 	for(i=0;i<list1->counts;i++) scanf("%d",&(list1->plist[i]));
-	
+
+	printf("Please enter how many numbers in list2: ");
 	scanf("%d",&(list2->counts));
 	list2->plist = getSpace(int,list2->counts);
 	for(i=0;i<list2->counts;i++) scanf("%d",&(list2->plist[i]));
 	/*帶輸出的泡沫排序*/
+	printf("sorted list1: ");
 	bubbleSort(list1);
+	printf("sorted list2: ");
 	bubbleSort(list2);
 	/*帶輸出的合併函數*/
+	printf("merged list: ");
 	merge(list1,list2);
-	
+
 	return 0;
 }
 /*利用swao_c確定排序狀況進行優化過的泡沫排序法*/
