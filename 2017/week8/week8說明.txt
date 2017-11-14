@@ -1,0 +1,14 @@
+1. 把上週的檔案給分拆為4個檔案 main.c, main.h, list.c, list.h, 要寫makefile
+main.c 包含 main, processAdd, processDel function的實做
+main.h 包含所有main.c函式的宣告
+list.c 包含所有其他list操作的所有function的實做
+list.h 包含list head與list資料結構的定義、包含所有list.c函式的宣告
+2. Include的限制
+在main.h中需include標準函式庫 (i.e. stdio.h, stdlib.h) 跟list.h
+在list.h中只能include main.h，不准include標準函式庫
+在main.c中只能include main.h
+在list.c中只能include list.h
+3. 在上週的作業中
+於processAdd裡頭挖空的部分，包裝成 addNodeToList 函式於list.c實做
+於processDel裡頭挖空的部分，包裝成 deleteNodeFromList函式於list.c實做
+
