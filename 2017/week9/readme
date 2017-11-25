@@ -1,0 +1,21 @@
+# week9-src為沒有註解的檔案 純英文檔案 所以無亂碼
+# week9-win 為Big5檔案 預設可於win中開啟無亂碼 github中部分格式會跑掉
+# week9-posix 為utf-8檔案 預設可於Posix體系系統中開啟無亂碼 在github中格式不會跑掉
+#作業內容如下:
+#宣告 typedef unsigned int Int32;
+#於程式中宣告三個global variables
+
+Int32 input;   /* example:   Int32 input = 0x22334455*/
+Int32 high;   /*max value = 31*/
+Int32 low;     /*min value = 0*/
+
+#寫2個function 
+
+int CheckRangeLoop (Int32 input, Int32 high, Int32 low);
+int CheckRangeNoLoop (Int32 input, Int32 high, Int32 low);
+
+#檢查 input 的32位元於 low – high區間是否有bit被設定為1
+#Ex. low: 0, high: 9, 則檢查0-9位元是否有1存在
+#如果有 則回傳 1, 如果都沒有 則回傳 0
+#Loop版本可以有迴圈, NoLoop版本不能有迴圈
+#寫一個main function呼叫上述兩個function，並印出回傳結果
